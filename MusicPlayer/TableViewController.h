@@ -11,6 +11,9 @@
 
 @interface TableViewController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 
+/*
+ * Atributos de componentes
+ */
 @property IBOutlet NSTableView* tabelaView;
 @property IBOutlet NSButton* botaoAdicionaMp3;
 @property IBOutlet NSButton* botaoRemoveMp3;
@@ -21,15 +24,18 @@
 @property IBOutlet NSButton* botaoDiminuiVolume;
 @property IBOutlet NSButton* botaoCalaBocaDoVolume;
 
+/*
+ * Atributos de suporte
+ */
 @property NSMutableArray* lista;
 @property NSInteger mp3Ativo;
 
-
-
-
+/*
+ * Actions
+ */
 -(IBAction)adicionaMp3:(id)sender;
 -(IBAction)removeMp3:(id)sender;
--(IBAction)cliqueAction:(id)sender;
--(IBAction)cliqueDuploAction:(id)sender;
+-(IBAction)selecionaMp3ComClique:(id)sender;
+-(IBAction)selecionaMp3ComCliqueDuplo:(id)sender;
 
 @end

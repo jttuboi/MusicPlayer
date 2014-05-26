@@ -34,7 +34,19 @@
     
     [self createTableView];
     
-    
+//    NSURL* urlll = [NSURL fileURLWithPath:@"/dir1/dir2/file.pdf"];
+//    NSLog(@"[urlll baseURL]                                           = %@", [urlll baseURL]);
+//    NSLog(@"[urlll parameterString]                                   = %@", [urlll parameterString]);
+//    NSLog(@"[urlll absoluteURL]                                       = %@", [urlll absoluteURL]);
+//    NSLog(@"[urlll absoluteString]                                    = %@", [urlll absoluteString]);
+//    NSLog(@"[urlll relativeString]                                    = %@", [urlll relativeString]);
+//    NSLog(@"[urlll relativePath]                                      = %@", [urlll relativePath]);
+//    NSLog(@"[urlll path]                                              = %@", [urlll path]);
+//    NSLog(@"[[urlll path] stringByDeletingLastPathComponent]          = %@", [[urlll path] stringByDeletingLastPathComponent]);
+//    NSLog(@"[urlll lastPathComponent]                                 = %@", [urlll lastPathComponent]);
+//    NSLog(@"[[urlll lastPathComponent] stringByDeletingPathExtension] = %@", [[urlll lastPathComponent] stringByDeletingPathExtension]);
+//    NSLog(@"[urlll pathExtension]                                     = %@", [urlll pathExtension]);
+//    NSLog(@"[urlll pathComponents]                                    = %@", [urlll pathComponents]);
 }
 
 

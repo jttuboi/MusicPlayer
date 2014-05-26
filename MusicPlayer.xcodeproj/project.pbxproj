@@ -11,6 +11,13 @@
 		5C793D9E19328DFB002294F6 /* Mp3.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C793D9D19328DFB002294F6 /* Mp3.m */; };
 		5C793DA119328E26002294F6 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C793DA019328E26002294F6 /* Track.m */; };
 		5C793DA419328E59002294F6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C793DA319328E59002294F6 /* TableViewController.m */; };
+		5C793DA719329530002294F6 /* AudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C793DA619329530002294F6 /* AudioPlayerController.m */; };
+		5C793DAA1932ADD8002294F6 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C793DA91932ADD8002294F6 /* Player.m */; };
+		5C793DB01932D855002294F6 /* 2CELLOS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C793DAB1932D855002294F6 /* 2CELLOS.mp3 */; };
+		5C793DB11932D855002294F6 /* Rufus_Welcoming_Ceremony.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C793DAC1932D855002294F6 /* Rufus_Welcoming_Ceremony.mp3 */; };
+		5C793DB21932D855002294F6 /* Still.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C793DAD1932D855002294F6 /* Still.mp3 */; };
+		5C793DB31932D855002294F6 /* TopGear1_vbr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C793DAE1932D855002294F6 /* TopGear1_vbr.mp3 */; };
+		5C793DB41932D855002294F6 /* TopGear2_vbr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C793DAF1932D855002294F6 /* TopGear2_vbr.mp3 */; };
 		5CA21F9619325AF400C36869 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA21F9519325AF400C36869 /* Cocoa.framework */; };
 		5CA21FA019325AF400C36869 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CA21F9E19325AF400C36869 /* InfoPlist.strings */; };
 		5CA21FA219325AF400C36869 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA21FA119325AF400C36869 /* main.m */; };
@@ -43,6 +50,15 @@
 		5C793DA019328E26002294F6 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		5C793DA219328E59002294F6 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		5C793DA319328E59002294F6 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		5C793DA519329530002294F6 /* AudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerController.h; sourceTree = "<group>"; };
+		5C793DA619329530002294F6 /* AudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerController.m; sourceTree = "<group>"; };
+		5C793DA81932ADD8002294F6 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		5C793DA91932ADD8002294F6 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		5C793DAB1932D855002294F6 /* 2CELLOS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2CELLOS.mp3; sourceTree = "<group>"; };
+		5C793DAC1932D855002294F6 /* Rufus_Welcoming_Ceremony.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rufus_Welcoming_Ceremony.mp3; sourceTree = "<group>"; };
+		5C793DAD1932D855002294F6 /* Still.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Still.mp3; sourceTree = "<group>"; };
+		5C793DAE1932D855002294F6 /* TopGear1_vbr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TopGear1_vbr.mp3; sourceTree = "<group>"; };
+		5C793DAF1932D855002294F6 /* TopGear2_vbr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TopGear2_vbr.mp3; sourceTree = "<group>"; };
 		5CA21F9219325AF400C36869 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA21F9519325AF400C36869 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5CA21F9819325AF400C36869 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,19 +143,28 @@
 		5CA21F9B19325AF400C36869 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				5C793D9919328DD2002294F6 /* MeuAudioPlayer.h */,
-				5C793D9A19328DD2002294F6 /* MeuAudioPlayer.m */,
 				5CA21FA719325AF400C36869 /* AppDelegate.h */,
 				5CA21FA819325AF400C36869 /* AppDelegate.m */,
 				5CA21FAA19325AF400C36869 /* MainMenu.xib */,
 				5CA21FAD19325AF400C36869 /* Images.xcassets */,
 				5CA21F9C19325AF400C36869 /* Supporting Files */,
+				5C793D9919328DD2002294F6 /* MeuAudioPlayer.h */,
+				5C793D9A19328DD2002294F6 /* MeuAudioPlayer.m */,
+				5C793DA219328E59002294F6 /* TableViewController.h */,
+				5C793DA319328E59002294F6 /* TableViewController.m */,
 				5C793D9C19328DFB002294F6 /* Mp3.h */,
 				5C793D9D19328DFB002294F6 /* Mp3.m */,
 				5C793D9F19328E26002294F6 /* Track.h */,
 				5C793DA019328E26002294F6 /* Track.m */,
-				5C793DA219328E59002294F6 /* TableViewController.h */,
-				5C793DA319328E59002294F6 /* TableViewController.m */,
+				5C793DA519329530002294F6 /* AudioPlayerController.h */,
+				5C793DA619329530002294F6 /* AudioPlayerController.m */,
+				5C793DA81932ADD8002294F6 /* Player.h */,
+				5C793DA91932ADD8002294F6 /* Player.m */,
+				5C793DAB1932D855002294F6 /* 2CELLOS.mp3 */,
+				5C793DAC1932D855002294F6 /* Rufus_Welcoming_Ceremony.mp3 */,
+				5C793DAD1932D855002294F6 /* Still.mp3 */,
+				5C793DAE1932D855002294F6 /* TopGear1_vbr.mp3 */,
+				5C793DAF1932D855002294F6 /* TopGear2_vbr.mp3 */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -251,8 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA21FA019325AF400C36869 /* InfoPlist.strings in Resources */,
+				5C793DB41932D855002294F6 /* TopGear2_vbr.mp3 in Resources */,
+				5C793DB21932D855002294F6 /* Still.mp3 in Resources */,
+				5C793DB31932D855002294F6 /* TopGear1_vbr.mp3 in Resources */,
+				5C793DB01932D855002294F6 /* 2CELLOS.mp3 in Resources */,
 				5CA21FAE19325AF400C36869 /* Images.xcassets in Resources */,
 				5CA21FA619325AF400C36869 /* Credits.rtf in Resources */,
+				5C793DB11932D855002294F6 /* Rufus_Welcoming_Ceremony.mp3 in Resources */,
 				5CA21FAC19325AF400C36869 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C793DAA1932ADD8002294F6 /* Player.m in Sources */,
+				5C793DA719329530002294F6 /* AudioPlayerController.m in Sources */,
 				5C793D9E19328DFB002294F6 /* Mp3.m in Sources */,
 				5C793DA419328E59002294F6 /* TableViewController.m in Sources */,
 				5CA21FA919325AF400C36869 /* AppDelegate.m in Sources */,

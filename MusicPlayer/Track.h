@@ -10,6 +10,24 @@
 
 @interface Track : NSObject
 
-@property (assign) float volume;
+/*
+ * Atributos de base
+ */
+@property (copy) NSString* selecionado;
+@property (strong, atomic) NSURL *url;
+@property NSString* extensao;
 
+/*
+ * Atributos do mp3
+ */
+@property (copy) NSString* nome;
+
+/*
+ * Métodos
+ */
+-(id)initComURL:(NSURL*)URL comPosicaoAtivada:(NSString*)ativo;
+-(id)initComMp3:(NSString*)oMp3 comPosicaoAtivada:(NSString*)ativo;
+
+//REM
+@property (assign) float volume;
 @end

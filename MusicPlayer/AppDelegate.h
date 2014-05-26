@@ -15,6 +15,8 @@
 {
     IBOutlet NSView *tabelaaaaaa;
     IBOutlet NSTableView *tabelaaaaaaTable;
+    
+    
 }
 
 @property (weak) IBOutlet NSTextField *linhaSelecionada;

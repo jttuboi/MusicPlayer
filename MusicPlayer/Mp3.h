@@ -10,10 +10,19 @@
 
 @interface Mp3 : NSObject
 
+/*
+ * Atributos de base
+ */
 @property (copy) NSString* selecionado;
-@property (copy) NSString* nome;
-//@property ARQUIVO* mp3;
 
+/*
+ * Atributos do mp3
+ */
+@property (copy) NSString* nome;
+
+/*
+ * Métodos
+ */
 -(id)initComMp3:(NSString*)oMp3 comPosicaoAtivada:(NSString*)ativo;
 
 @end

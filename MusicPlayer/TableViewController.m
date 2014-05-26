@@ -19,14 +19,26 @@
 @synthesize botaoAumentaVolume;
 @synthesize botaoDiminuiVolume;
 @synthesize botaoCalaBocaDoVolume;
-
 @synthesize lista;
 @synthesize mp3Ativo;
 
 
 
+-(id)init {
+    NSLog(@"TableViewControler::init");
+    
+    self = [super init];
+    if (self) {
+        lista = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
+
 -(void)awakeFromNib {
     NSLog(@"TableViewControler::awakeFromNib");
+    
     //    NSScrollView* scroll = [[NSScrollView alloc] initWithFrame:[tabelaView frame]];
     //
     //    NSTableColumn* col0 = [[NSTableColumn alloc] initWithIdentifier:@"selecionado"];
@@ -60,8 +72,8 @@
     [tabelaView setDataSource:self];
     [tabelaView setDelegate:self];
     [tabelaView setTarget:self];
-    [tabelaView setAction:@selector(cliqueAction:)];
-    [tabelaView setDoubleAction:@selector(cliqueDuploAction:)];
+    [tabelaView setAction:@selector(selecionaMp3ComClique:)];
+    [tabelaView setDoubleAction:@selector(selecionaMp3ComCliqueDuplo:)];
     
     [botaoAdicionaMp3 setTarget:self];
     [botaoAdicionaMp3 setAction:@selector(adicionaMp3:)];
@@ -72,19 +84,9 @@
 
 
 
--(id)init {
-    NSLog(@"TableViewControler::init");
-    self = [super init];
-    if (self) {
-        lista = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
-
-
 -(IBAction)adicionaMp3:(id)sender {
     NSLog(@"TableViewControler::adicionaMp3");
+    
     // um mp3 serah selecionado de algum local e enviado os dados pra cah
     if ([lista count] == 0) {
         [lista addObject:[[Mp3 alloc] initComMp3:@"Still_More_Fighting" comPosicaoAtivada:@">"]];
@@ -112,21 +114,20 @@
 
 
 
--(IBAction)cliqueAction:(id)sender {
+-(IBAction)selecionaMp3ComClique:(id)sender {
     NSLog(@"TableViewControler::cliqueAction");
     
-    NSInteger linha = [tabelaView clickedRow];
-    NSLog(@"linha = %ld",linha);
+    //NSInteger linha = [tabelaView clickedRow];
+    //NSLog(@"linha = %ld",linha);
 }
 
 
 
--(IBAction)cliqueDuploAction:(id)sender {
+-(IBAction)selecionaMp3ComCliqueDuplo:(id)sender {
     NSLog(@"TableViewControler::cliqueDuploAction");
     
     NSInteger linha = [tabelaView clickedRow];
-    NSLog(@"linha = %ld",linha);
-    
+    //NSLog(@"linha = %ld",linha);
     
     if (linha == -1) {
         // se clicado em qqr lugar dentro da tabelaView e nao seja a linha, nada faz
@@ -152,6 +153,7 @@
 
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     //NSLog(@"TableViewControler::tableView");
+    
     Mp3* mp3 = [lista objectAtIndex:row];
     NSString* identificador = [tableColumn identifier];
     return [mp3 valueForKey:identificador];
@@ -160,7 +162,8 @@
 
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NSLog(@"TableViewControler::numberOfRowsInTableView");
+    //NSLog(@"TableViewControler::numberOfRowsInTableView");
+    
     return [lista count];
 }
 
