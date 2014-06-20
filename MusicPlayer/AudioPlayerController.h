@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
+#import <AVFoundation/AVFoundation.h>
 #import "Track.h"
 
-@interface AudioPlayerController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
+@interface AudioPlayerController : NSObject <AVAudioPlayerDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
 /*
  * Atributos de componentes
@@ -33,8 +33,8 @@
 /*
  * Atributos importantes
  */
-@property NSMutableArray* listaTrack;
-@property (nonatomic, strong) Player *player;
+@property NSMutableArray* listaNomesTrack;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property float volume;
 
 /*

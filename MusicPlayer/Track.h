@@ -28,6 +28,4 @@
 -(id)initComURL:(NSURL*)URL comPosicaoAtivada:(NSString*)ativo;
 -(id)initComMp3:(NSString*)oMp3 comPosicaoAtivada:(NSString*)ativo;
 
-//REM
-@property (assign) float volume;
 @end
